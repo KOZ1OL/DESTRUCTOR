@@ -33,6 +33,7 @@ do
  case $start in
      [yY][eE][sS]|[yY])
   clear
+  cd Scripts
   ./main.sh
  break
  ;;
