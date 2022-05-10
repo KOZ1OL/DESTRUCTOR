@@ -22,7 +22,7 @@ if [ $a = olborskitochuj ] ; then
 	echo "Przerwanie działania skryptu ctrl+c" | lolcat
 while true
 do
- read -r -p "Wybierz opcję  - " input
+ read -r -p "Wybierz opcję  - " input | lolcat
  
  case $input in
      [1][eE][sS]|[1])
