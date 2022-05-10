@@ -1,4 +1,5 @@
 #! /bin/bash
+clear
 figlet "Destructor" | lolcat
 spin(){
     echo -n "Sprawdzam dostępność aktualizacji"
