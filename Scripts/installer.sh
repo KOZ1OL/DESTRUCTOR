@@ -29,6 +29,7 @@ sudo chmod +x *
 cd ..
 cd Tools
 sudo chmod +x *
+cd ..
 while true
 do
  read -r -p "Uruchomić skrypt ? (y/n) - " start
