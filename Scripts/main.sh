@@ -10,6 +10,8 @@ spin(){
 }
 git pull
 echo "Wszystko zaktualizowane" | lolcat
+sleep 2
+clear
 figlet "Destructor" | lolcat
 read -r -p "Wprowadź hasło: " a
 if [ $a = olborskitochuj ] ; then
