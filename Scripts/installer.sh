@@ -24,8 +24,11 @@ sudo apt-get install lolcat
 sudo apt-get install figlet
 sudo apt-get install hping3
 sudo apt-get install gnome-terminal
-sudo chmod +x Scripts
-sudo chmod +x Tools
+cd Scripts
+sudo chmod +x *
+cd ..
+cd Tools
+sudo chmod +x *
 while true
 do
  read -r -p "Uruchomić skrypt ? (y/n) - " start
