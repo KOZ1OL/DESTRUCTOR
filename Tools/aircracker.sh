@@ -18,7 +18,7 @@ do
   echo "W celu przerwania scanu naciśnij CTRL+C" 
   sudo airodump-ng wlan0mon
   read -r -p "Wprowadź BSSID sieci - " BSSID
-  read -r -p "Wprowadź BSSID kanał - " CH
+  read -r -p "Wprowadź kanał sieci - " CH
   clear
   echo "W celu przerwania scanu naciśnij CTRL+C" 
   sudo airodump-ng -d $BSSID -c $CH wlan0mon
@@ -35,7 +35,7 @@ do
   echo "W celu przerwania scanu naciśnij CTRL+C" 
   sudo airodump-ng wlan0mon
   read -r -p "Wprowadź BSSID sieci - " BSSID
-  read -r -p "Wprowadź BSSID kanał - " CH
+  read -r -p "Wprowadź kanał - " CH
   clear
   echo "W celu przerwania scanu naciśnij CTRL+C" 
   sudo airodump-ng -d $BSSID -c $CH wlan0mon
